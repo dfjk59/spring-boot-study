@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.pangu.demo.dao.UserDao">
+    <select id="findUserByName" resultType="com.pangu.demo.domain.User">
+        select mtrl_id as code, mtrl_name as username, MTRL_DESC name
+        from TB_BS_MTRL 
+         where mtrl_id=#{userName}
+    </select>
+</mapper>
